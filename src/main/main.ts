@@ -71,6 +71,7 @@ const createWindow = async () => {
 
   mainWindow = new BrowserWindow({
     show: false,
+    title: "Tim's Program",
     width: 1024,
     height: 728,
     icon: getAssetPath('icon.png'),
@@ -97,6 +98,7 @@ const createWindow = async () => {
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
+
 
   const menuBuilder = new MenuBuilder(mainWindow);
   menuBuilder.buildMenu();
